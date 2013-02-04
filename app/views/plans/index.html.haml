@@ -1,0 +1,20 @@
+- model_class = ''
+.page-header
+  %h1=t 'Plans'
+%table.table.table-striped
+  %thead
+    %tr
+      %th= 'ID'
+      %th= 'Name'
+      %th= 'Description'
+      %th= 'Price'
+      %th= 'Billing'
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @plans.each do |plan|
+      %tr
+        %td= link_to plan.id, '#'
+        %td= link_to plan.name, '#'
+        %td= link_to plan.description, '#'
+        %td= link_to plan.price, '#'
+

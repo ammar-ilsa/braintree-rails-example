@@ -1,0 +1,14 @@
+<table class="table.table-striped">
+  <thead>
+  <tr>ID</tr>
+  <tr>Name</tr>
+  <tr>Description</tr>
+  <tr>Amount</tr>
+  </thead>
+  <% @plans.each do |plan| %>
+      <td><%= plan.id %> </td>
+      <td><%= plan.name %> </td>
+      <td><%= plan.price%> </td>
+
+  <% end %>
+</table>
